@@ -1,7 +1,9 @@
 const URL = "https://api.openai.com/v1/chat/completions";
 import axios from "redaxios";
 // 读取 env.KEY 设定为 API_KEY
-const API_KEY = import.meta.env.VITE_KEY;
+const API_KEY =
+  (document.querySelector('meta[name="key"]') as any)?.content ??
+  import.meta.env.VITE_KEY;
 
 // 读取用户输入的字符串，进行拼装
 const standardJson = (str: string) => {

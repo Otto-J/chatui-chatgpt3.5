@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "./App.css";
 import Chat, { Bubble, useMessages } from "@chatui/core";
 import { useOpenapi } from "./useOpenapi";
@@ -19,7 +18,6 @@ function App() {
 
       fetchAPI(val)
         .then((res) => {
-          debugger;
           const resArr = res.data.choices ?? [];
           // 循环 resArr 把元素 message 丢给 appendMsg
           resArr.forEach((item: any) => {
@@ -32,13 +30,6 @@ function App() {
         .catch((e) => {
           console.log("err", e);
         });
-
-      // setTimeout(() => {
-      //   appendMsg({
-      //     type: "text",
-      //     content: { text: "Bala bala" },
-      //   });
-      // }, 1000);
     }
   }
 
