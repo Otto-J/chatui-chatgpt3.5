@@ -1,4 +1,4 @@
-FROM nginx:latest
+FROM nginx:1.22-alpine
 
 # 将本地的 nginx.conf 文件复制到容器中
 COPY ./nginx/nginx.conf /etc/nginx/nginx.conf

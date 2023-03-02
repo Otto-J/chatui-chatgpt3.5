@@ -16,6 +16,10 @@
 
 ## 构建方式
 
-docker build -t chatgpt-3.5-gui:0.0.1 .
+docker build -t chatgpt-3.5-gui:0.0.2 .
 
-docker run --rm --name my-chat-gui -p 8080:80 -e KEY=xxx chatgpt-3.5-gui:0.0.1
+docker run --rm --name my-chat-gui -p 8080:80 -e KEY=xxx chatgpt-3.5-gui:0.0.2
+
+docker tag 10a1b01ca1da ji3206/chatgpt-3.5-gui:0.0.2
+
+docker push ji3206/chatgpt-3.5-gui:0.0.2
